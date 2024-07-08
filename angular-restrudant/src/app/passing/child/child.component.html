@@ -1,0 +1,15 @@
+<p>child works!</p>
+<p>Data from parent is {{inputFromParent}} </p>
+
+<button (click)="getdata()">See parent Data in console</button>
+
+<h2> Counter value is {{counterValue}} </h2>
+
+<button (click)="sendDataToParent()">Send doubling of data to parent</button>
+
+
+<!-- Angular JS -->
+<div>
+  <input placeholder="enter name.." [(ngModel)]="name" /> <!-- Two way data binding -->
+  <p>Name is {{name +" is "+ 5+10}} {{a*b}} </p>
+</div>

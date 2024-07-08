@@ -1,0 +1,28 @@
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hi1 {
+  color: red;
+}
+
+.hi2 {
+  color: green;
+}
+
+.robotImg {
+  width: 100px;
+}
+
+#btn1 {
+  background-color: black;
+  color: red;
+  padding: 4px;
+  border: 2px;
+}
+
+.orange {
+  background: orange;
+}

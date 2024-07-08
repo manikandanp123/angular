@@ -1,0 +1,111 @@
+<h4 class="text-center">Adding Restaurant</h4>
+
+
+<!-- Life Cyle Hooks -->
+<h2>Life Cycle Hooks</h2>
+<input type="text" placeholder="Enter Your Name..." #nameGet />
+<button (click)="btnSubmit(nameGet)">Submit</button>
+<textarea type="text" (change)="addresGet($event)" placeholder="Address" name="" id=""></textarea>
+
+<input type="text" placeholder="age" (input)="change($event)" name="" id="">
+<!-- <app-lifecycle [addr]="address" [age]="age" *ngIf="destroy"> -->
+  <app-lifecycle [inp]="inputvalue" [addr]="address" [age]="age" *ngIf="destroy">
+  <h2 class="orange"> Projected Content - {{age}} </h2>
+</app-lifecycle>
+
+<button (click)="destroyFn()">Destroy</button>
+<button (click)="rebuild()">Re Build</button>
+
+<p>Address -{{address}} name - {{nameGet.value}} </p>
+<!-- ng content -->
+<app-ngcontent>
+  <h2 class="header">Header</h2>
+  <button class="btn" id="btn1">Submit</button>
+</app-ngcontent>
+
+<!-- Image -->
+<img [src]="robot" alt="robot image" class="robotImg" />
+
+<!-- Directive -->
+<h4 appCustomDir>Hello World</h4>
+
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success !</strong> Your data added Successfully.
+  <button type="button" (click)="close()" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- Conditional  -->
+<div [class]="check ? 'hi1':'hi2' ">
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. In beatae eveniet pariatur omnis perspiciatis quas maiores
+  sit quibusdam, nostrum quia numquam, soluta quae dignissimos expedita, optio neque quaerat unde cumque.
+</div>
+
+<div *ngFor="let i of student | keyvalue ">
+  Key : <span>{{i.key}} </span> and Value: <span> {{i.value}} </span>
+</div>
+
+<div *ngFor="let x of Object.keys(student)">
+  <p>{{x}} - {{student[x]}} </p>
+</div>
+
+<div class="center">
+  <div class="col-md-6">
+    <form [formGroup]="addRestaurant" (ngSubmit)="formSubmitting()">
+      <!-- Text -->
+      <div class="form-group">
+        <label>Name</label><input type="text" placeholder="Restaurant Name..." class="form-control"
+          formControlName="name" />
+      </div>
+      <div class="form-group">
+        <label>Place</label><input type="text" placeholder="Restaurant Place..." class="form-control"
+          formControlName="place" />
+      </div>
+      <div class="form-group">
+        <label>Email</label><input type="email" placeholder="Restaurant Email..." class="form-control"
+          formControlName="email" />
+      </div>
+
+      <!-- Radio -->
+      <div class="form-group">
+        <p>Gender</p>
+        <input type="radio" name="gender" value="male" id="male" placeholder="Gender Slecting"
+          formControlName="gender" />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female" female placeholder="Gender Slecting"
+          formControlName="gender" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" value="others" id="others" placeholder="Gender Slecting"
+          formControlName="gender" />
+        <label for="others">Others</label>
+        <!-- <input type="email" placeholder="Restaurant Email..." class="form-control" formControlName="email" /> -->
+      </div>
+
+      <!-- Checkbox -->
+      <div class="form-group">
+        <p>City Avaiable </p>
+        <input type="checkbox" value="chennai" id="chennai" placeholder="City Avaiable"
+          (change)="changingCheckbox($event)" formControlName="city" />
+        <label for="chennai">Chennnai</label>
+        <input type="checkbox" name="city" value="madurai" id="madurai" placeholder="City Avaiable"
+          (change)="changingCheckbox($event)" formControlName="city" />
+        <label for=" madurai">Madurai</label>
+        <input type="checkbox" name="city" value="coimbatore" id="coimbatore" placeholder="City Avaiable"
+          (change)="changingCheckbox($event)" formControlName="city" />
+        <label for="coimbatore">Coimbatore</label>
+      </div>
+
+      <!-- Select -->
+      <div class="form-group">
+        <p>Rating</p>
+        <select title="rating" name="rating" id="rating" placeholder="rating" formControlName="rating">
+          <option value=" 5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="addRestaurant.invalid"> Submit</button>
+    </form>
+  </div>
+</div>

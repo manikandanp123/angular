@@ -1,0 +1,13 @@
+<p>ngcontent works!</p>
+
+<ng-content></ng-content>
+
+
+<h6>Gettig content from parent using ng content</h6>
+
+<ng-content select=".header"></ng-content>
+<h4>sample data</h4>
+<ng-content select="#btn1"></ng-content>
+<ng-content select=".header"></ng-content> <!-- This content will not show select using gives priority -->
+
+<ng-content></ng-content> <!--This content will show and it will render at last because of no select  -->

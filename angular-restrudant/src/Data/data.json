@@ -1,0 +1,34 @@
+{
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "KFC Restaurant",
+      "place": "America",
+      "email": "kfc@gmail.com"
+    },
+    {
+      "name": "Burger Restaurant",
+      "place": "United Kingdom",
+      "email": "burger@gmail.com",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Poppins Restaurant",
+      "place": "India",
+      "email": "poppins@gmail.com"
+    },
+    {
+      "name": "Fish Restaurant",
+      "place": "Chennai,TN",
+      "email": "fish@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "vinay",
+      "place": "Andhra",
+      "email": "vinay@gmail.com",
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<h1>Parent one</h1>
+
+<h5>Parent data component DATA BINDING </h5>
+<!-- Interpolation data binding -->
+<p>Name is {{name}} </p>
+<p>Age is {{age}} </p>
+
+<!-- property data binding -->
+<img [src]="image" alt="image from component" />
+
+<!-- Event data binding -->
+<input type="text" (change)="changing($event)" placeholder="event binding checking" />
+<button (click)="submit($event)">Submit</button>
+
+<!-- Two way data binding -->
+<div>
+  <input type="text" [(ngModel)]="fname" placeholder="First Name.." /> <!-- FormsModule need to added  -->
+  <p>Fname is {{fname}} </p>
+</div>
+
+
+<div>
+  <h4>Counter</h4>
+  <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
+</div>
+
+<h6>Child data is down</h6>
+<app-child [inputFromParent]="name" [counterValue]="counter" (doubleOfCounter)="fromChild($event)"></app-child>
+
+
+<p> After doubling {{afterDoubling}} </p>
